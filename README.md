@@ -22,7 +22,7 @@ c
 
 ![web_app_site](./assets/images/web_app_site.webp)
 
-<!-- ### Database Server
+### Database Server
 
 *O que é?*
 
@@ -30,7 +30,7 @@ c
 
 ![client_web_database](./assets/images/client_web_database.png)
 
-### Bug Bounty Programs
+<!-- ### Bug Bounty Programs
 
 *O que é?*
 
