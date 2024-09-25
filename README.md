@@ -14,15 +14,15 @@ Acesso à página da ufcd: _https://cet93.github.io/UFCD9189_
 
 ![web_app_sec](./assets/images/web_app_sec.webp)
 
-<!-- ### Web Application
+### Web Application
 
 *O que é?*
-
+c
 > __Web Application__ ou Aplicação Web é um software ou programa que é usado diretamente no navegador de internet, sem precisar instalar no dispositivo. Ela roda em servidores remotos e é acessada via navegador, permitindo que os usuários interajam com o programa através da web, seja para enviar e-mails, editar documentos, ou acessar dados em tempo real.
 
 ![web_app_site](./assets/images/web_app_site.webp)
 
-### Database Server
+<!-- ### Database Server
 
 *O que é?*
 
