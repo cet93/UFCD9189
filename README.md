@@ -65,7 +65,7 @@ c
 > __OWASP (Open Web Application Security Project)__ é uma organização sem fins lucrativos que se dedica a melhorar a segurança de softwares e aplicações web. Ela fornece recursos, ferramentas, documentações e guias gratuitos para ajudar desenvolvedores, empresas e especialistas em segurança a entender e mitigar riscos de segurança cibernética.
 
 
-<!-- ### Access Control
+### Access Control
 
 *O que é?*
 
@@ -81,7 +81,7 @@ c
 
 
 
-### Cryptographic
+<!-- ### Cryptographic
 
 *O que é?*
 
