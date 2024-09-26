@@ -96,7 +96,7 @@ c
 > __HTTP__ (__Hypertext Transfer Protocol__) é um protocolo usado para comunicação entre navegadores web e servidores na Internet. Ele define como as mensagens são formatadas e transmitidas, permitindo a comunicação entre os navegadores e os servidores.
 > HTTPS (Hypertext Transfer Protocol Secure) é a versão segura do HTTP, usada para garantir a proteção das comunicações entre o navegador e o servidor. Ele utiliza criptografia, geralmente com o protocolo SSL (Secure Sockets Layer) ou TLS (Transport Layer Security), para proteger os dados transmitidos.
 
-<!-- ### SSL/TLS
+### SSL/TLS
 
 *O que é?*
 
@@ -104,12 +104,10 @@ c
 
 > __TLS__ (__Transport Layer Security__) é um protocolo de segurança que criptografa a comunicação entre navegadores e servidores, garantindo a privacidade e integridade dos dados transmitidos. Ele é a versão mais atualizada e segura do SSL.
 
-__TLS__ substituiu o __SSL__ porque o SSL apresentava vulnerabilidades de segurança que tornavam suas versões menos seguras contra ataques modernos.
+<!-- __TLS__ substituiu o __SSL__ porque o SSL apresentava vulnerabilidades de segurança que tornavam suas versões menos seguras contra ataques modernos.
 - TLS usa algoritmos de criptografia, mecanismos de segurança mais fortes e, é mais resistente a ataques.
-- O processo de negociação da conexão é mais seguro e eficiente no TLS.
+- O processo de negociação da conexão é mais seguro e eficiente no TLS. -->
 
-
-oi -->
 
 
 
