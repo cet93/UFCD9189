@@ -104,10 +104,9 @@ c
 
 > __TLS__ (__Transport Layer Security__) é um protocolo de segurança que criptografa a comunicação entre navegadores e servidores, garantindo a privacidade e integridade dos dados transmitidos. Ele é a versão mais atualizada e segura do SSL.
 
-<!-- __TLS__ substituiu o __SSL__ porque o SSL apresentava vulnerabilidades de segurança que tornavam suas versões menos seguras contra ataques modernos.
+__TLS__ substituiu o __SSL__ porque o SSL apresentava vulnerabilidades de segurança que tornavam suas versões menos seguras contra ataques modernos.
 - TLS usa algoritmos de criptografia, mecanismos de segurança mais fortes e, é mais resistente a ataques.
-- O processo de negociação da conexão é mais seguro e eficiente no TLS. -->
-
+- O processo de negociação da conexão é mais seguro e eficiente no TLS.
 
 
 
