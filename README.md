@@ -81,7 +81,7 @@ c
 
 
 
-<!-- ### Cryptographic
+### Cryptographic
 
 *O que é?*
 
@@ -89,7 +89,7 @@ c
 > O objetivo da criptografia é garantir a confidencialidade, integridade e autenticidade dos dados, protegendo-os contra acessos não autorizados.
 
 
-### HTTP/HTTPS
+<!-- ### HTTP/HTTPS
 
 *O que é?*
 
