@@ -109,6 +109,14 @@ __TLS__ substituiu o __SSL__ porque o SSL apresentava vulnerabilidades de segura
 - O processo de negociação da conexão é mais seguro e eficiente no TLS.
 
 
+### Insecure Direct Object References (IDOR)
+
+*O que é?*
+
+> __IDOR__ é uma vulnerabilidade que ocorre quando uma aplicação permite que usuários acessem diretamente recursos, modificando identificadores em URLs ou parâmetros, sem validação de permissão, possibilitando o acesso a dados de outros usuários de forma indevida.
+
+_Imagine que você tem um armário na escola, e cada aluno tem uma chave com o número do armário. Se a escola não prestar atenção, pode ser que qualquer aluno, com a mesma chave, consiga abrir outros armários apenas mudando o número. No mundo digital, o __IDOR__ é como se você pudesse mudar o número na chave e acessar as coisas dos outros, sem permissão._
+
 
 <!-- du/dt = a*d^2u/dx^2
 
