@@ -133,18 +133,22 @@ Forense Digital possui dois tipos de investigações:
 
 - __Private-sector investigations__ são investigações conduzidas por empresas ou entidades privadas para proteger seus próprios interesses. Envolve a coleta e análise de evidências digitais para resolver questões internas; _fraude corporativa_, _violação de políticas internas_, _roubo de propriedade intelectual_, _investigações de incidentes de segurança_, _vazamento de dados_.
 
-
 > __pdfinfo__ é uma ferramenta de linha de comando que faz parte do pacote __Poppler__ e é usada para extrair informações de arquivos PDF. Ele exibe detalhes como o título do documento, autor, número de páginas, tamanho da página, data de criação, e versão do PDF.
+
+Em __Kali Linux__ se o pacote __Poppler__ estiver indisponível, segue o comando para instalação do mesmo: `apt install poppler-utils`
 
 - Comando de uso: `pdfinfo caminho/nomeArquivo.pdf`
 
-Em __Kali Linux__ é necessário instalar o pacote __Poppler__: `apt install poppler-utils`
+![kali linux client intro digital forensics 00](./images/intro_digital_forensics_00.png)
 
 > __exiftool__ é uma ferramenta de linha de comando usada para ler, escrever e editar metadados de diversos tipos de arquivos.
 
+Em __Kali Linux__ se o pacote __libimage-exiftool-perl__ estiver indisponível, segue o comando para instalação do mesmo: `apt install libimage-exiftool-perl`
+
 - Comando de uso: `exiftool caminho/nomeArquivo.png`
 
-Em __Kali Linux__ se o pacote __libimage-exiftool-perl__ estiver indisponível, segue o comando para instalação do mesmo: `apt install libimage-exiftool-perl`
+![kali linux client intro digital forensics 01](./images/intro_digital_forensics_01.png)
+
 
 ---
 ---
@@ -152,14 +156,23 @@ Em __Kali Linux__ se o pacote __libimage-exiftool-perl__ estiver indisponível, 
 
 ## __Como a Web Funciona__
 
-> DNS (Domain Name System) é o sistema que traduz nomes de domínio legíveis (como www.exemplo.com) em endereços IP numéricos (como 192.168.1.1) que os computadores usam para se comunicar entre si, funciona como uma "agenda telefônica" da internet.
+> __DNS__: _Domain Name System_ é o sistema que traduz nomes de domínio legíveis (como www.exemplo.com) em endereços IP numéricos (como 192.168.1.1) que os computadores usam para se comunicar entre si, funciona como uma "agenda telefônica" da internet.
 
+> __Root Domain__: Domínio Raiz refere-se ao ponto mais alto da hierarquia de nomes de domínio no sistema DNS, representado por um ponto (.) e normalmente não aparece nas URLs.
 
+> __TLD__: Top-Level Domain é a parte final de um nome de domínio na internet (.br, .com, .gov).
 
+> __Second-Level Domain__: representa o nome único escolhido por uma entidade (github, kali, tryhackme).
 
+> __Subdomain__: é uma parte adicional de um nome de domínio, usado para organizar diferentes seções de um site ou serviço ("mail" em mail.google.com).
 
+> Hierarquia:\
+> __Root Domain__ (.) – no topo.\
+> __Top-Level Domain__ (TLD) – como .com ou .org.\
+> __Second-Level Domain__ – como google em google.com.\
+> __Subdomains__ – como mail em mail.google.com.
 
-
+Tamanho máximo para o _subdomain_ são 63 caracteres, e para o _domain name_ 253 caracteres.
 
 <!-- du/dt = a*d^2u/dx^2
 
