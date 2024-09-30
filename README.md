@@ -142,9 +142,19 @@ Em __Kali Linux__ é necessário instalar o pacote __Poppler__: `apt install pop
 
 > __exiftool__ é uma ferramenta de linha de comando usada para ler, escrever e editar metadados de diversos tipos de arquivos.
 
-- Comando de uso: `exiftool  caminho/nomeArquivo.png`
+- Comando de uso: `exiftool caminho/nomeArquivo.png`
 
 Em __Kali Linux__ se o pacote __libimage-exiftool-perl__ estiver indisponível, segue o comando para instalação do mesmo: `apt install libimage-exiftool-perl`
+
+---
+---
+---
+
+## __Como a Web Funciona__
+
+> DNS (Domain Name System) é o sistema que traduz nomes de domínio legíveis (como www.exemplo.com) em endereços IP numéricos (como 192.168.1.1) que os computadores usam para se comunicar entre si, funciona como uma "agenda telefônica" da internet.
+
+
 
 
 
@@ -166,3 +176,5 @@ Hidden Markov models
 
 t = -ln(r) / ln(1 + r)
 (P * (1 + r)^t) * r = P -->
+
+
