@@ -6,6 +6,8 @@ Acesso à página da ufcd: _https://cet93.github.io/UFCD9189_
 
 ---
 
+## __Web Application Security__
+
 ### Web Application Security
 
 *O que é?*
@@ -116,6 +118,37 @@ __TLS__ substituiu o __SSL__ porque o SSL apresentava vulnerabilidades de segura
 > __IDOR__ é uma vulnerabilidade que ocorre quando uma aplicação permite que usuários acessem diretamente recursos, modificando identificadores em URLs ou parâmetros, sem validação de permissão, possibilitando o acesso a dados de outros usuários de forma indevida.
 
 _Imagine que você tem um armário na escola, e cada aluno tem uma chave com o número do armário. Se a escola não prestar atenção, pode ser que qualquer aluno, com a mesma chave, consiga abrir outros armários apenas mudando o número. No mundo digital, o __IDOR__ é como se você pudesse mudar o número na chave e acessar as coisas dos outros, sem permissão._
+
+---
+---
+---
+
+## __Intro to Digital Forensics__
+
+> Digital Forensics ou Forense Digital refere-se à coleta, análise e preservação de evidências digitais para entender como um ataque aconteceu e identificar os responsáveis. Imagine que aconteceu um roubo em uma casa. A Forense Digital é como a investigação que busca pistas, como pegadas ou digitais, para descobrir quem fez o roubo e como aconteceu.
+
+Forense Digital possui dois tipos de investigações:
+
+- __Public-sector investigations__ referem-se a investigações conduzidas por agências governamentais ou entidades públicas. Essas investigações geralmente envolvem crimes que afetam o interesse público; _crimes cibernéticos_, _fraude_, _terrorismo_, _espionagem_.
+
+- __Private-sector investigations__ são investigações conduzidas por empresas ou entidades privadas para proteger seus próprios interesses. Envolve a coleta e análise de evidências digitais para resolver questões internas; _fraude corporativa_, _violação de políticas internas_, _roubo de propriedade intelectual_, _investigações de incidentes de segurança_, _vazamento de dados_.
+
+
+> __pdfinfo__ é uma ferramenta de linha de comando que faz parte do pacote __Poppler__ e é usada para extrair informações de arquivos PDF. Ele exibe detalhes como o título do documento, autor, número de páginas, tamanho da página, data de criação, e versão do PDF.
+
+- Comando de uso: `pdfinfo caminho/nomeArquivo.pdf`
+
+Em __Kali Linux__ é necessário instalar o pacote __Poppler__: `apt install poppler-utils`
+
+> __exiftool__ é uma ferramenta de linha de comando usada para ler, escrever e editar metadados de diversos tipos de arquivos.
+
+- Comando de uso: `exiftool  caminho/nomeArquivo.png`
+
+Em __Kali Linux__ se o pacote __libimage-exiftool-perl__ estiver indisponível, segue o comando para instalação do mesmo: `apt install libimage-exiftool-perl`
+
+
+
+
 
 
 <!-- du/dt = a*d^2u/dx^2
