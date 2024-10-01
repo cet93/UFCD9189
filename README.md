@@ -174,6 +174,25 @@ Em __Kali Linux__ se o pacote __libimage-exiftool-perl__ estiver indisponível, 
 
 Tamanho máximo para o _subdomain_ são 63 caracteres, e para o _domain name_ 253 caracteres.
 
+__DNS Record Types__:
+
+> Os tipos de registros DNS Record Types são diferentes entradas usadas para armazenar informações específicas sobre domínios e seu comportamento.
+
+> __A (Address Record)__: Mapeia um nome de domínio para um endereço IPv4; `exemplo.com.   3600   IN   A   192.168.1.1`\
+> __AAAA (IPv6 Address Record)__: Mapeia um nome de domínio para um endereço IPv6; `exemplo.com.   3600   IN   AAAA   2001:0db8:85a3:0000:0000:8a2e:0370:7334`\
+> CNAME (Canonical Name Record): Define um domínio como um alias para outro; `www.exemplo.com.   3600   IN   CNAME   exemplo.com.`\
+> __MX (Mail Exchange Record)__: Indica os servidores de e-mail responsáveis por receber e-mails para o domínio; `exemplo.com.   3600   IN   MX   10 mail.exemplo.com.`\
+> __NS (Name Server Record)__: Especifica os servidores DNS que são responsáveis pela zona de um domínio; `exemplo.com.   3600   IN   NS   ns1.exemplo.com.`\
+> __PTR (Pointer Record)__: Usado para consultas reversas, mapeando um IP para um nome de domínio; `1.1.168.192.in-addr.arpa.   3600   IN   PTR   exemplo.com.`\
+> __TXT (Text Record)__: Armazena informações de texto, muitas vezes usadas para verificação de domínios e políticas de segurança; `exemplo.com.   3600   IN   TXT   "v=spf1 include:_spf.exemplo.com ~all"`\
+> __SOA (Start of Authority Record)__: Contém informações sobre a zona DNS, como o servidor principal e o controle de atualização; `exemplo.com.   3600   IN   SOA   ns1.exemplo.com. admin.exemplo.com. 2023091001 7200 3600 1209600 86400`
+
+
+
+
+
+
+
 <!-- du/dt = a*d^2u/dx^2
 
 Bachelier's model
