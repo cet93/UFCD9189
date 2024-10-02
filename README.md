@@ -180,18 +180,46 @@ __DNS Record Types__:
 
 > __A (Address Record)__: Mapeia um nome de domínio para um endereço IPv4; `exemplo.com.   3600   IN   A   192.168.1.1`\
 > __AAAA (IPv6 Address Record)__: Mapeia um nome de domínio para um endereço IPv6; `exemplo.com.   3600   IN   AAAA   2001:0db8:85a3:0000:0000:8a2e:0370:7334`\
-> CNAME (Canonical Name Record): Define um domínio como um alias para outro; `www.exemplo.com.   3600   IN   CNAME   exemplo.com.`\
+> __CNAME (Canonical Name Record)__: Define um domínio como um alias para outro; `www.exemplo.com.   3600   IN   CNAME   exemplo.com.`\
 > __MX (Mail Exchange Record)__: Indica os servidores de e-mail responsáveis por receber e-mails para o domínio; `exemplo.com.   3600   IN   MX   10 mail.exemplo.com.`\
 > __NS (Name Server Record)__: Especifica os servidores DNS que são responsáveis pela zona de um domínio; `exemplo.com.   3600   IN   NS   ns1.exemplo.com.`\
 > __PTR (Pointer Record)__: Usado para consultas reversas, mapeando um IP para um nome de domínio; `1.1.168.192.in-addr.arpa.   3600   IN   PTR   exemplo.com.`\
 > __TXT (Text Record)__: Armazena informações de texto, muitas vezes usadas para verificação de domínios e políticas de segurança; `exemplo.com.   3600   IN   TXT   "v=spf1 include:_spf.exemplo.com ~all"`\
 > __SOA (Start of Authority Record)__: Contém informações sobre a zona DNS, como o servidor principal e o controle de atualização; `exemplo.com.   3600   IN   SOA   ns1.exemplo.com. admin.exemplo.com. 2023091001 7200 3600 1209600 86400`
 
+__O que Acontece quando se faz uma requisição DNS__:
 
+> 1. Verificação do cache local (DNS Resolver Cache):\
+> - O sistema operacional verifica se o nome de domínio já está armazenado em cache localmente. Esse cache contém endereços IP de consultas DNS anteriores. Se o endereço IP do domínio solicitado estiver no cache, o processo termina aqui e o navegador usa esse IP para contatar o servidor.\
+> - Se o cache local não tiver a informação, a solicitação continua.
 
+> 2. Consulta ao servidor DNS Recursivo (ou Resolver):\
+> - Se o cache local não tiver o resultado, o dispositivo faz uma solicitação ao servidor DNS recursivo configurado, fornecidos pelo ISP ou um DNS público.\
+> - O servidor DNS recursivo tem a função de procurar a resposta em seu próprio cache ou realizar a consulta a outros servidores DNS se necessário.
 
+> 3. Verificação no cache do servidor DNS recursivo:\
+> - O servidor DNS recursivo verifica se ele já tem o IP do domínio solicitado armazenado em seu cache. Se sim, ele envia a resposta de volta para o dispositivo.\
+> - Se não tiver a resposta, ele inicia o processo de consulta a outros servidores DNS.
 
+> 4. Consulta aos servidores DNS raiz (Root Servers):\
+> - Se o servidor recursivo não encontrar a resposta em seu cache, ele faz uma consulta aos servidores DNS raiz. Esses servidores são o ponto de partida para a resolução de nomes de domínio e contêm informações sobre os servidores de Top-Level Domain.\
+> - O servidor raiz não conhece o endereço IP do domínio exato, mas sabe qual servidor DNS gerencia o TLD da solicitação.
 
+> 5. Consulta ao servidor TLD:\
+> - O servidor DNS recursivo, agora ciente do servidor que gerencia o TLD do domínio, faz uma nova consulta a esse servidor TLD.\
+> - O servidor TLD não sabe o endereço IP, mas sabe qual é o servidor autoritativo para o domínio.
+
+> 6. Consulta ao servidor autoritativo:\
+> - O servidor DNS recursivo agora consulta o servidor DNS autoritativo para o domínio. O servidor autoritativo é o que contém o registro DNS oficial para o domínio, incluindo o endereço IP (registro A) associado ao domínio.\
+> - O servidor autoritativo responde com o endereço IP correto.
+
+> 7. Retorno da resposta ao dispositivo solicitante:\
+> - O servidor DNS recursivo retorna o endereço IP ao dispositivo que fez a solicitação original. O dispositivo então armazena essa informação no cache local para futuras consultas.
+
+> 8. Conexão ao servidor web:\
+> - Agora que o dispositivo tem o endereço IP do domínio, ele pode se conectar diretamente ao servidor usando o protocolo HTTP ou HTTPS. O navegador faz uma solicitação ao endereço IP correspondente e exibe o site ao usuário. 
+
+__1. Cache local → 2. Servidor DNS recursivo → 3. Servidor Root → 4. Servidor TLD → 5. Servidor Autoritativo → 6. Resposta ao cliente → 7. Conexão ao servidor web.__
 
 <!-- du/dt = a*d^2u/dx^2
 
