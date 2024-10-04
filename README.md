@@ -221,6 +221,18 @@ __O que Acontece quando se faz uma requisição DNS__:
 
 __1. Cache local → 2. Servidor DNS recursivo → 3. Servidor Root → 4. Servidor TLD → 5. Servidor Autoritativo → 6. Resposta ao cliente → 7. Conexão ao servidor web.__
 
+`nslookup` é uma ferramenta de linha de comando usada para consultar servidores DNS e obter informações sobre a resolução de nomes de domínio, como descobrir o endereço IP de um site ou verificar registros DNS específicos.
+
+- `nslookup www.exemplo.com`
+- `nslookup -type=A exemplo.com`
+- `nslookup -type=CNAME www.exemplo.com`
+- `nslookup -type=MX exemplo.com`
+- `nslookup -type=TXT exemplo.com`
+
+
+
+
+
 <!-- du/dt = a*d^2u/dx^2
 
 Bachelier's model
