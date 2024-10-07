@@ -314,9 +314,72 @@ __Métodos HTTP__ são formas de o cliente indicar a ação que deseja realizar 
 
 - __DELETE__: Usado para remover informações ou registros do servidor.
 
-Esses métodos ajudam a definir a intenção da requisição e como o servidor deve processar os dados.
 
+__HTTP Status Codes__:
 
+- __100-199 - Information Response__
+    - Esses códigos são enviados para informar ao cliente que a primeira parte da requisição foi aceita e que ele deve continuar enviando o restante. Esses códigos não são mais muito comuns.
+
+- __200-299 - Success__
+    - Essa faixa de códigos de status é usada para informar ao cliente que a requisição foi bem-sucedida.
+
+- __300-399 - Redirection__
+    - Esses códigos são usados para redirecionar a requisição do cliente para outro recurso. Isso pode ser para uma página diferente ou até mesmo para um site diferente.
+
+- __400-499 - Client Errors__
+    - Usados para informar ao cliente que houve um erro na sua requisição.
+
+- __500-599 - Server Errors__
+    - Reservado para erros que ocorrem no lado do servidor e geralmente indicam um problema grave com o servidor ao processar a requisição.
+
+__Common HTTP Status Codes__:
+
+- __200 - OK__  
+    - A requisição foi concluída com sucesso.
+
+- __201 - Created__  
+    - Um recurso foi criado (por exemplo, um novo usuário ou post no blog).
+
+- __301 - Moved Permanently__  
+    - Redireciona o navegador do cliente para uma nova página ou informa aos motores de busca que a página mudou permanentemente para outro local.
+
+- __302 - Found__  
+    - Similar ao redirecionamento permanente, mas indica uma mudança temporária e que pode ser revertida em breve.
+
+- __400 - Bad Request__  
+    - Indica que algo estava errado ou faltando na requisição. Pode ser usado quando um recurso esperado não foi enviado pelo cliente.
+
+- __401 - Not Authorized__  
+    - O acesso ao recurso não é permitido até que o cliente se autentique, geralmente com nome de usuário e senha.
+
+- __403 - Forbidden__  
+    - O cliente não tem permissão para acessar o recurso, independentemente de estar autenticado.
+
+- __405 - Method Not Allowed__  
+    - O método da requisição não é permitido para este recurso. Por exemplo, enviar uma requisição GET para um recurso que espera um POST.
+
+- __404 - Page Not Found__  
+    - A página ou recurso solicitado não existe.
+
+- __500 - Internal Service Error__  
+    - O servidor encontrou um erro ao processar a requisição e não sabe como lidar com isso.
+
+- __503 - Service Unavailable__  
+    - O servidor está indisponível para processar a requisição devido a sobrecarga ou manutenção.
+
+__Headers__: são dados adicionais que você pode enviar ao servidor web ao fazer requisições. Embora nenhum header seja estritamente necessário, você pode ter dificuldades em visualizar um site corretamente sem eles.
+
+__Common Request Headers__:
+
+_Esses são headers enviados pelo cliente (geralmente o navegador) para o servidor._
+
+- __Host__: Alguns servidores web hospedam vários sites, então, ao fornecer o header Host, você informa qual site deseja acessar. Caso contrário, você receberá o site padrão do servidor.
+
+- __User-Agent__: Esse header informa ao servidor o software e a versão do navegador, o que ajuda a formatar o site corretamente para o navegador em uso. Além disso, alguns elementos de HTML, JavaScript e CSS são específicos de determinados navegadores.
+
+- __Content-Length__: Ao enviar dados para um servidor, como em um formulário, o Content-Length indica o tamanho dos dados. Isso permite que o servidor verifique se não está faltando nenhuma parte da informação.
+
+- __Accept-Encoding__: Informa ao servidor quais tipos de compressão o navegador suporta, permitindo que os dados sejam compactados para serem transmitidos pela internet de forma mais eficiente.
 
 
 
