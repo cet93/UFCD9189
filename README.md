@@ -229,6 +229,143 @@ __1. Cache local → 2. Servidor DNS recursivo → 3. Servidor Root → 4. Servi
 - `nslookup -type=MX exemplo.com`
 - `nslookup -type=TXT exemplo.com`
 
+__URL__: _Uniform Resource Locator_ é um endereço usado para acessar recursos na internet, como páginas de sites. Cada URL tem várias partes, que podem incluir:
+- __Scheme__: Protocolo de acesso, como HTTP ou HTTPS.
+- __User__: Nome de usuário e senha (usado para login em alguns serviços).
+- __Host__: Domínio ou IP do servidor.
+- __Port__: Porta de acesso (como 80 para HTTP).
+- __Path__: Caminho do recurso específico no site.
+- __Query__ String: Parâmetros extras, como ?id=1.
+- __Fragment__: Referência a uma seção específica da página, como #task3.
+
+![url_exemplo](./images/url_exemplo.png)
+
+__Request__: ou _Requisição_ é quando um dispositivo ou programa faz um pedido para acessar informações ou recursos de outro servidor ou sistema na internet. 
+
+> __Exemplo__:\
+> GET / HTTP/1.1\
+> Host: tryhackme.com\
+> User-Agent: Mozilla/5.0 Firefox/87.0\
+> Referer: https://tryhackme.com/
+
+- Linha 1: `GET / HTTP/1.1`
+    - GET é o método de solicitação, pedindo para obter o recurso (no caso, a página inicial "/").
+    - O HTTP/1.1 indica que estamos usando a versão 1.1 do protocolo HTTP.
+
+- Linha 2: `Host: tryhackme.com`
+    - Informa ao servidor qual domínio estamos acessando, no caso, tryhackme.com.
+
+- Linha 3: `User-Agent: Mozilla/5.0 Firefox/87.0`
+    - Especifica o navegador que está fazendo a requisição. Neste caso, Mozilla Firefox versão 87.
+
+- Linha 4: `Referer: https://tryhackme.com/`
+    - Mostra ao servidor a página anterior que direcionou o usuário, conhecida como Referer.
+
+- Linha 5: (`linha em branco`)
+    - HTTP Requests sempre terminam com uma _linha em branco_ para indicar ao servidor que a requisição foi completada.
+
+
+__Response__: ou _Resposta_ HTTP é o retorno que o servidor envia para o cliente após receber e processar uma requisição.
+
+> __Exemplo__:\
+> HTTP/1.1 200 OK\
+> Server: nginx/1.15.8\
+> Date: Fri, 09 Apr 2021 13:34:03 GMT\
+> Content-Type: text/html\
+> Content-Length: 98\
+> <html>\
+> <head>\
+>     <title>TryHackMe</title>\
+> </head>\
+> <body>\
+>     Welcome To TryHackMe.com\
+> </body>\
+> </html>
+
+- Linha 1: `HTTP/1.1 200 OK`
+    - HTTP/1.1 indica a versão do protocolo que o servidor está usando.
+    - 200 OK é o código de status que indica que a solicitação foi bem-sucedida.
+
+- Linha 2: `Server: nginx/1.15.8`
+    - Informa qual software de servidor está sendo usado e sua versão, neste caso, nginx versão 1.15.8.
+
+- Linha 3: `Date: Fri, 09 Apr 2021 13:34:03 GMT`
+    - Mostra a data e hora em que a resposta foi enviada, no formato GMT.
+
+- Linha 4: `Content-Type: text/html`
+    - Informa o tipo de conteúdo que será retornado. Aqui é HTML.
+
+- Linha 5: `Content-Length: 98`
+    - Indica o tamanho do conteúdo em bytes, permitindo que o cliente saiba quanto dados esperar.
+
+- Linha 6: (`linha em branco`)
+    - Como na _requisição_, uma _linha em branco_ marca o final dos cabeçalhos.
+
+- Linhas 7-14:
+    - Contêm o corpo da resposta, que é o conteúdo solicitado. Neste exemplo, é o HTML da página inicial de TryHackMe.
+
+__Métodos HTTP__ são formas de o cliente indicar a ação que deseja realizar ao fazer uma requisição HTTP. Aqui estão os métodos mais comuns:
+
+- __GET__: Usado para obter informações de um servidor web. É o método mais básico, geralmente utilizado para acessar páginas e recursos.
+
+- __POST__: Usado para enviar dados ao servidor, normalmente para criar novos registros. Por exemplo, ao enviar um formulário de cadastro.
+
+- __PUT__: Usado para atualizar informações no servidor. Se você quiser alterar dados já existentes, esse é o método adequado.
+
+- __DELETE__: Usado para remover informações ou registros do servidor.
+
+Esses métodos ajudam a definir a intenção da requisição e como o servidor deve processar os dados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
