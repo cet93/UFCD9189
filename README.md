@@ -381,8 +381,10 @@ _Esses são headers enviados pelo cliente (geralmente o navegador) para o servid
 
 - __Accept-Encoding__: Informa ao servidor quais tipos de compressão o navegador suporta, permitindo que os dados sejam compactados para serem transmitidos pela internet de forma mais eficiente.
 
+- __Cookie__: Dados enviados ao servidor para ajudar a lembrar informações sobre o usuário (veja mais na seção sobre cookies).
 
-
+> __Cookies__: São pequenos dados que um site salva no seu computador. Eles são armazenados quando o servidor envia o header "Set-Cookie". Em requisições futuras, o navegador envia esses dados de volta para o servidor.\
+Como o HTTP não mantém registro de visitas anteriores, os cookies ajudam o servidor a lembrar quem você é, suas preferências no site e se você já visitou antes.
 
 
 
